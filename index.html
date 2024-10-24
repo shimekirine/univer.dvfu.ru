@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://moore-jp.github.io/pass4/ -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="https://univer.dvfu.ru/favicon/android-app-icon.webp?v=wAXxPe8bK4">
+<link rel="shortcut icon" type="image/x-icon" href="https://univer.dvfu.ru/favicon/favicon.ico?v=wAXxPe8bK4">
+<link rel="icon" type="image/png" sizes="16x16" href="https://univer.dvfu.ru/favicon/favicon-16x16.png?v=wAXxPe8bK4">
+<link rel="icon" type="image/png" sizes="32x32" href="https://univer.dvfu.ru/favicon/favicon-32x32.png?v=wAXxPe8bK4">
+<link rel="icon" type="image/png" sizes="48x48" href="https://univer.dvfu.ru/favicon/favicon-48x48.png?v=wAXxPe8bK4">
+<link rel="manifest" href="https://univer.dvfu.ru/favicon/site.webmanifest?v=wAXxPe8bK4">
+<link rel="mask-icon" href="https://univer.dvfu.ru/favicon/safari-pinned-tab.svg?v=wAXxPe8bK4" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="Мой Универ">
+<meta name="application-name" content="Мой Универ">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png?v=wAXxPe8bK4">
+<meta name="theme-color" content="#ffffff">
+
+<meta name="apple-itunes-app" content="app-id=1508108372">
+<meta name="google-play-app" content="app-id=ru.dvfu.univermobile">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="android-touch-icon" href="https://univer.dvfu.ru/favicon/android-app-icon.webp?v=wAXxPe8bK4">
+<title>Заказ пропусков</title>
+    <meta name="csrf-param" content="_csrf_univer">
+<meta name="csrf-token" content="SvxGodmaH0_wBTASvkqfPYQAAsTlNqhqPuJ04e7ihlUFsQGQkPwveZ1zBVv_e_IO5WxTvKlA-wdxhRySq7fuNw==">
+    <link href="./index_files/style.css" rel="stylesheet">
+<link href="./index_files/pass_frontend.css" rel="stylesheet">
+<link href="./index_files/notification.css" rel="stylesheet">
+<script async="" src="./index_files/tag.js.загрузка"></script><script async="" src="./index_files/tag(1).js.загрузка"></script><script async="" src="./index_files/tag(1).загрузка"></script><script>var appOptions = {"notificationUrl":"https:\/\/notify-univer.dvfu.ru\/api\/v1\/notifications","r":["undergraduate"],"t":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTc3MTUyNjUsImV4cCI6MTcwMDMwNzI2NSwidWlkIjo1MzEzMSwidXNlcm5hbWUiOiJtYWtzaW1vdmEuYXZ5Iiwicm9sZSI6ImFkbWluIn0.-TbYTP1E9oLuK_DWYF-4W4S7dIXPgO3b4big1sqwKT8"};</script><style type="text/css">
+.vue-modal-top,
+.vue-modal-bottom,
+.vue-modal-left,
+.vue-modal-right,
+.vue-modal-topRight,
+.vue-modal-topLeft,
+.vue-modal-bottomLeft,
+.vue-modal-bottomRight {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  background: transparent;
+  z-index: 9999999;
+}
+.vue-modal-topRight,
+.vue-modal-topLeft,
+.vue-modal-bottomLeft,
+.vue-modal-bottomRight {
+  width: 12px;
+  height: 12px;
+}
+.vue-modal-top {
+  right: 12;
+  top: 0;
+  width: 100%;
+  height: 12px;
+  cursor: n-resize;
+}
+.vue-modal-bottom {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 12px;
+  cursor: s-resize;
+}
+.vue-modal-left {
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  cursor: w-resize;
+}
+.vue-modal-right {
+  right: 0;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  cursor: e-resize;
+}
+.vue-modal-topRight {
+  right: 0;
+  top: 0;
+  background: transparent;
+  cursor: ne-resize;
+}
+.vue-modal-topLeft {
+  left: 0;
+  top: 0;
+  cursor: nw-resize;
+}
+.vue-modal-bottomLeft {
+  left: 0;
+  bottom: 0;
+  cursor: sw-resize;
+}
+.vue-modal-bottomRight {
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
+}
+#vue-modal-triangle::after {
+  display: block;
+  position: absolute;
+  content: '';
+  background: transparent;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #ddd;
+  border-left: 10px solid transparent;
+}
+#vue-modal-triangle.clicked::after {
+  border-bottom: 10px solid #369be9;
+}
+</style><style type="text/css">
+.vm--block-scroll {
+  overflow: hidden;
+  width: 100vw;
+}
+.vm--container {
+  position: fixed;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+}
+.vm--overlay {
+  position: fixed;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  /* z-index: 999; */
+  opacity: 1;
+}
+.vm--container.scrollable {
+  height: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.vm--modal {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
+}
+.vm--container.scrollable .vm--modal {
+  margin-bottom: 2px;
+}
+.vm--top-right-slot {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.vm-transition--overlay-enter-active,
+.vm-transition--overlay-leave-active {
+  transition: all 50ms;
+}
+.vm-transition--overlay-enter,
+.vm-transition--overlay-leave-active {
+  opacity: 0;
+}
+.vm-transition--modal-enter-active,
+.vm-transition--modal-leave-active {
+  transition: all 400ms;
+}
+.vm-transition--modal-enter,
+.vm-transition--modal-leave-active {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.vm-transition--default-enter-active,
+.vm-transition--default-leave-active {
+  transition: all 2ms;
+}
+.vm-transition--default-enter,
+.vm-transition--default-leave-active {
+  opacity: 0;
+}
+</style><style type="text/css">
+.vue-dialog {
+  font-size: 14px;
+}
+.vue-dialog div {
+  box-sizing: border-box;
+}
+.vue-dialog-content {
+  flex: 1 0 auto;
+  width: 100%;
+  padding: 14px;
+}
+.vue-dialog-content-title {
+  font-weight: 600;
+  padding-bottom: 14px;
+}
+.vue-dialog-buttons {
+  display: flex;
+  flex: 0 1 auto;
+  width: 100%;
+  border-top: 1px solid #eee;
+}
+.vue-dialog-buttons-none {
+  width: 100%;
+  padding-bottom: 14px;
+}
+.vue-dialog-button {
+  font-size: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  line-height: 40px;
+  height: 40px;
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
+.vue-dialog-button:hover {
+  background: #f9f9f9;
+}
+.vue-dialog-button:active {
+  background: #f3f3f3;
+}
+.vue-dialog-button:not(:first-of-type) {
+  border-left: 1px solid #eee;
+}
+</style><style>/*!
+* Copyright © 2015-2021 Atilika Inc.  All rights reserved.
+*
+* This unpublished material is proprietary to Atilika Inc.
+*
+* The methods and techniques described herein are considered trade secrets
+* and/or confidential.  Reproduction or distribution, in whole or in part,
+* is forbidden except by express written permission of Atilika Inc.
+*/.jio-read-button-container{position:absolute;background-color:#fff;z-index:10000;height:30px;width:30px;padding:0;margin:0;-webkit-user-select:none;-moz-user-select:none;user-select:none}.jio-read-button{display:block;overflow:hidden;width:30px;height:30px;border-radius:3px;background-repeat:no-repeat;background-position:50% 50%;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0MHB4IiBoZWlnaHQ9IjQwcHgiIHZpZXdCb3g9IjAgMCA0MCA0MCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5ERDU4NEY2Ny1DM0Q2LTRDRjUtOUM2MC0yQThBRUY5RjUzRjc8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggc2tldGNodG9vbC48L2Rlc2M+ICAgIDxkZWZzPjwvZGVmcz4gICAgPGcgaWQ9IkRlc2t0b3AiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgaWQ9IkxvZ2luIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjIwLjAwMDAwMCwgLTgwLjAwMDAwMCkiIGZpbGw9IiNCREMzQzciPiAgICAgICAgICAgIDxwYXRoIGQ9Ik02NDQuMTI1LDEwMC45ODMgQzY0NC42NDQsMTAwLjk4MyA2NDUuMDg2LDEwMS4wOTEgNjQ1LjQ1MSwxMDEuMzA3IEM2NDUuODE1LDEwMS41MjQgNjQ2LjEwOSwxMDEuODEyIDY0Ni4zMzUsMTAyLjE3NSBDNjQ2LjU1OSwxMDIuNTM4IDY0Ni43MjQsMTAyLjk2MiA2NDYuODMsMTAzLjQ1MSBDNjQ2LjkzNSwxMDMuOTM4IDY0Ni45ODcsMTA0LjQ1NCA2NDYuOTg3LDEwNC45OTggQzY0Ni45ODcsMTA3LjY4NyA2NDYuMDMzLDEwOS4wMjUgNjQ0LjEyNSwxMDkuMDExIEM2NDIuMDA2LDEwOS4wMTEgNjQwLjk5NCwxMDcuNjQ1IDY0MC45OTQsMTA1LjA0NCBDNjQwLjk5NCwxMDEuOTQ0IDY0Mi4yMTcsMTAwLjk2OSA2NDQuMTI1LDEwMC45ODMgTDY0NC4xMjUsMTAwLjk4MyBaIE02NDEuNzc4LDExMC41NjMgQzY0Mi40MDgsMTEwLjg0NSA2NDMuMTQ5LDExMC45ODYgNjQ0LDExMC45ODYgQzY0NS42MDksMTEwLjk4NiA2NDYuODQ1LDExMC40NzEgNjQ3LjcwMywxMDkuNDQzIEM2NDguNTYyLDEwOC40MTQgNjQ4Ljk5LDEwNi45MzEgNjQ4Ljk5LDEwNC45OTUgQzY0OC45OSwxMDQuMDk1IDY0OC44OTIsMTAzLjI3NiA2NDguNjk1LDEwMi41MzcgQzY0OC40OTcsMTAxLjc5NiA2NDguMTkzLDEwMS4xNjQgNjQ3Ljc4MywxMDAuNjM4IEM2NDcuMzczLDEwMC4xMTIgNjQ2Ljg1Myw5OS43MDkgNjQ2LjIyMiw5OS40MjYgQzY0NS41OTIsOTkuMTQ0IDY0NC44NTEsOTkuMDAzIDY0NCw5OS4wMDMgQzY0Mi4zODksOTkuMDAzIDY0MS4xNTQsOTkuNTE3IDY0MC4yOTcsMTAwLjU0NiBDNjM5LjQzOCwxMDEuNTc2IDYzOS4wMDksMTAzLjA1OSA2MzkuMDA5LDEwNC45OTUgQzYzOS4wMDksMTA1Ljg5NCA2MzkuMTA3LDEwNi43MTMgNjM5LjMwNiwxMDcuNDUzIEM2MzkuNTAzLDEwOC4xOTMgNjM5LjgwNywxMDguODI1IDY0MC4yMTcsMTA5LjM1MSBDNjQwLjYyNywxMDkuODc3IDY0MS4xNDcsMTEwLjI4MSA2NDEuNzc4LDExMC41NjMgTDY0MS43NzgsMTEwLjU2MyBaIE02MzUuNjksOTYuNzI5IEM2MzUuODkxLDk2LjU0NSA2MzUuOTkxLDk2LjMxIDYzNS45OTEsOTYuMDI2IEM2MzUuOTkxLDk1Ljc0MyA2MzUuODkxLDk1LjQ5OSA2MzUuNjksOTUuMjk1IEM2MzUuNDksOTUuMDkxIDYzNS4yNDksOTQuOTkgNjM0Ljk2Niw5NC45OSBDNjM0LjY4NCw5NC45OSA2MzQuNDUxLDk1LjA5MSA2MzQuMjY5LDk1LjI5NSBDNjM0LjA4Niw5NS40OTkgNjMzLjk5NSw5NS43NDMgNjMzLjk5NSw5Ni4wMjYgQzYzMy45OTUsOTYuMzEgNjM0LjA4Niw5Ni41NDUgNjM0LjI2OSw5Ni43MjkgQzYzNC40NTEsOTYuOTE0IDYzNC42ODQsOTcuMDA2IDYzNC45NjYsOTcuMDA2IEM2MzUuMjQ5LDk3LjAwNiA2MzUuNDksOTYuOTE0IDYzNS42OSw5Ni43MjkgTDYzNS42OSw5Ni43MjkgWiBNNjI4LjI2OSw5NS4yOTUgQzYyOC4wODYsOTUuNDk5IDYyNy45OTUsOTUuNzQzIDYyNy45OTUsOTYuMDI2IEM2MjcuOTk1LDk2LjMxIDYyOC4wODYsOTYuNTQ1IDYyOC4yNjksOTYuNzI5IEM2MjguNDUxLDk2LjkxNCA2MjguNjg0LDk3LjAwNiA2MjguOTY2LDk3LjAwNiBDNjI5LjI0OSw5Ny4wMDYgNjI5LjQ4OSw5Ni45MTQgNjI5LjY5LDk2LjcyOSBDNjI5Ljg5LDk2LjU0NSA2MjkuOTksOTYuMzEgNjI5Ljk5LDk2LjAyNiBDNjI5Ljk5LDk1Ljc0MyA2MjkuODksOTUuNDk5IDYyOS42OSw5NS4yOTUgQzYyOS40ODksOTUuMDkxIDYyOS4yNDksOTQuOTkgNjI4Ljk2Niw5NC45OSBDNjI4LjY4NCw5NC45OSA2MjguNDUxLDk1LjA5MSA2MjguMjY5LDk1LjI5NSBMNjI4LjI2OSw5NS4yOTUgWiBNNjMzLjk5NSwxMTEuMDEgTDYzNi4wMDksMTExLjAxIEw2MzYuMDA5LDk5LjAxIEw2MzMuOTk1LDk5LjAxIEw2MzMuOTk1LDExMS4wMSBaIE02MjAsMTAwIEM2MjAsMTA1LjM0NzMyOSA2MjIuMTA0Njk2LDExMC4xOTk3NTggNjI1LjUyNDQ1MywxMTMuNzg3NzIgQzYyNS42ODM0ODUsMTEzLjk1NDU3NCA2MjYuMDEsMTEzLjk1NyA2MjYuMDEsMTEzLjk1NyBDNjI2LjE0LDExMy45NzIgNjI2LjI2MiwxMTMuOTg0IDYyNi4zNzYsMTEzLjk5MiBDNjI2LjQ4OSwxMTQgNjI2LjYxMSwxMTQuMDA0IDYyNi43NDEsMTE0LjAwNCBDNjI3Ljg3OSwxMTQuMDA0IDYyOC43MDgsMTEzLjYzOCA2MjkuMjI5LDExMi45MDYgQzYyOS43NDgsMTEyLjE3NCA2MzAuMDA5LDExMS4wNjggNjMwLjAwOSwxMDkuNTg4IEw2MzAuMDA5LDk5LjAwOSBMNjI4LjA1OCw5OS4wMDkgTDYyOC4wNTgsMTA4Ljg3MyBDNjI4LjA1OCwxMDkuNDYxIDYyOC4wMzcsMTA5Ljk3NCA2MjcuOTk3LDExMC40MTIgQzYyNy45NTYsMTEwLjg0OSA2MjcuODYzLDExMS4yMTIgNjI3LjcxNywxMTEuNDk4IEM2MjcuNTcsMTExLjc4NSA2MjcuMzYzLDExMS45OTUgNjI3LjA5NSwxMTIuMTMgQzYyNy4wMTgsMTEyLjE3IDYyNi45MTYsMTEyLjE5IDYyNi44MjMsMTEyLjIxOCBDNjIzLjg0MywxMDkuMDA3IDYyMiwxMDQuNzI2IDYyMiwxMDAgQzYyMiw5MC4wNTggNjMwLjA1OSw4MiA2NDAsODIgQzY0OS45NDEsODIgNjU4LDkwLjA1OCA2NTgsMTAwIEM2NTgsMTA5Ljk0MSA2NDkuOTQxLDExOCA2NDAsMTE4IEM2MzYuNjA4LDExOCA2MzMuNDUsMTE3LjA0MyA2MzAuNzQ0LDExNS40MDkgQzYzMC4yNDIsMTE1LjgwMyA2MjkuNTc3LDExNi4wMDQgNjI4Ljc0MSwxMTYuMDA0IEM2MjguNjExLDExNi4wMDQgNjI4LjQ4OSwxMTYgNjI4LjM3NiwxMTUuOTkzIEM2MjguMjk1LDExNS45ODcgNjI4LjIwNiwxMTUuOTc3IDYyOC4xMTcsMTE1Ljk2NyBDNjMxLjM1OCwxMTguNDk0IDYzNS40OTcsMTIwIDY0MCwxMjAgQzY1MS4wNDYsMTIwIDY2MCwxMTEuMDQ2IDY2MCwxMDAgQzY2MCw4OC45NTQgNjUxLjA0Niw4MCA2NDAsODAgQzYyOC45NTQsODAgNjIwLDg4Ljk1NCA2MjAsMTAwIFoiIGlkPSJsb2dvIj48L3BhdGg+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=);background-size:20px;border:1px solid #e1e5e5;box-shadow:0 0 0 1px #e1e5e5;cursor:pointer;padding:0;margin:0}.jio-read-button:hover{background-color:rgba(225,229,229,.3)}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uLy4uL19pbl9wYWdlX3NlbGVjdGlvbl9idXR0b25fc2NyaXB0LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7O0NBQTRCLENBVzVCLDJCQUNFLGlCQUFBLENBQ0EscUJBQUEsQ0FDQSxhQUFBLENBR0EsV0FBQSxDQUNBLFVBQUEsQ0FDQSxTQUFBLENBQ0EsUUFBQSxDQUdBLHdCQUFBLENBQUEscUJBQUEsQ0FBQSxnQkFBQSxDQUdGLGlCQUNFLGFBQUEsQ0FDQSxlQUFBLENBQ0EsVUFBQSxDQUNBLFdBQUEsQ0FDQSxpQkFBQSxDQUNBLDJCQUFBLENBQ0EsMkJBQUEsQ0FDQSw0OElBQUEsQ0FDQSxvQkFBQSxDQUNBLHdCQUFBLENBQ0EsNEJBQUEsQ0FDQSxjQUFBLENBR0EsU0FBQSxDQUNBLFFBQUEsQ0FFQSx1QkFDRSxxQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbIiRfX2lzLW1vZHVsZS1jb250ZXh0OiBmYWxzZTsvKiFcbiAqIENvcHlyaWdodCDCqSAyMDE1LTIwMjEgQXRpbGlrYSBJbmMuICBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICpcbiAqIFRoaXMgdW5wdWJsaXNoZWQgbWF0ZXJpYWwgaXMgcHJvcHJpZXRhcnkgdG8gQXRpbGlrYSBJbmMuXG4gKlxuICogVGhlIG1ldGhvZHMgYW5kIHRlY2huaXF1ZXMgZGVzY3JpYmVkIGhlcmVpbiBhcmUgY29uc2lkZXJlZCB0cmFkZSBzZWNyZXRzXG4gKiBhbmQvb3IgY29uZmlkZW50aWFsLiAgUmVwcm9kdWN0aW9uIG9yIGRpc3RyaWJ1dGlvbiwgaW4gd2hvbGUgb3IgaW4gcGFydCxcbiAqIGlzIGZvcmJpZGRlbiBleGNlcHQgYnkgZXhwcmVzcyB3cml0dGVuIHBlcm1pc3Npb24gb2YgQXRpbGlrYSBJbmMuXG4gKi9cblxuXG4uamlvLXJlYWQtYnV0dG9uLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgei1pbmRleDogMTAwMDA7XG5cbiAgLy8gVXN1YWxseS1yZWR1bmRhbnQgc3R5bGluZyB0byBhdm9pZCBpbmZsdWVuY2UgYnkgKHZlcnkgZ2VuZXJhbCkgc3R5bGVzIGluIGhvc3Qgc2l0ZVxuICBoZWlnaHQ6IDMwcHg7XG4gIHdpZHRoOiAzMHB4O1xuICBwYWRkaW5nOiAwO1xuICBtYXJnaW46IDA7XG5cbiAgLy8gUHJldmVudHMgdGV4dCBzZWxlY3Rpb24gKG5lZWRlZCBieSB0aGUgbWFpbiBzY3JpcHQpIGZyb20gYmVpbmcgcmVtb3ZlZCB3aGVuIGJ1dHRvbiBpcyBjbGlja2VkXG4gIHVzZXItc2VsZWN0OiBub25lO1xufVxuXG4uamlvLXJlYWQtYnV0dG9uIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHdpZHRoOiAzMHB4O1xuICBoZWlnaHQ6IDMwcHg7XG4gIGJvcmRlci1yYWRpdXM6IDNweDtcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogNTAlIDUwJTtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKGRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEQ5NGJXd2dkbVZ5YzJsdmJqMGlNUzR3SWlCbGJtTnZaR2x1WnowaVZWUkdMVGdpUHo0OGMzWm5JSGRwWkhSb1BTSTBNSEI0SWlCb1pXbG5hSFE5SWpRd2NIZ2lJSFpwWlhkQ2IzZzlJakFnTUNBME1DQTBNQ0lnZG1WeWMybHZiajBpTVM0eElpQjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIaHRiRzV6T25oc2FXNXJQU0pvZEhSd09pOHZkM2QzTG5jekxtOXlaeTh4T1RrNUwzaHNhVzVySWo0Z0lDQWdJQ0FnSUR4MGFYUnNaVDVFUkRVNE5FWTJOeTFETTBRMkxUUkRSalV0T1VNMk1DMHlRVGhCUlVZNVJqVXpSamM4TDNScGRHeGxQaUFnSUNBOFpHVnpZejVEY21WaGRHVmtJSGRwZEdnZ2MydGxkR05vZEc5dmJDNDhMMlJsYzJNK0lDQWdJRHhrWldaelBqd3ZaR1ZtY3o0Z0lDQWdQR2NnYVdROUlrUmxjMnQwYjNBaUlITjBjbTlyWlQwaWJtOXVaU0lnYzNSeWIydGxMWGRwWkhSb1BTSXhJaUJtYVd4c1BTSnViMjVsSWlCbWFXeHNMWEoxYkdVOUltVjJaVzV2WkdRaVBpQWdJQ0FnSUNBZ1BHY2dhV1E5SWt4dloybHVJaUIwY21GdWMyWnZjbTA5SW5SeVlXNXpiR0YwWlNndE5qSXdMakF3TURBd01Dd2dMVGd3TGpBd01EQXdNQ2tpSUdacGJHdzlJaU5DUkVNelF6Y2lQaUFnSUNBZ0lDQWdJQ0FnSUR4d1lYUm9JR1E5SWswMk5EUXVNVEkxTERFd01DNDVPRE1nUXpZME5DNDJORFFzTVRBd0xqazRNeUEyTkRVdU1EZzJMREV3TVM0d09URWdOalExTGpRMU1Td3hNREV1TXpBM0lFTTJORFV1T0RFMUxERXdNUzQxTWpRZ05qUTJMakV3T1N3eE1ERXVPREV5SURZME5pNHpNelVzTVRBeUxqRTNOU0JETmpRMkxqVTFPU3d4TURJdU5UTTRJRFkwTmk0M01qUXNNVEF5TGprMk1pQTJORFl1T0RNc01UQXpMalExTVNCRE5qUTJMamt6TlN3eE1ETXVPVE00SURZME5pNDVPRGNzTVRBMExqUTFOQ0EyTkRZdU9UZzNMREV3TkM0NU9UZ2dRelkwTmk0NU9EY3NNVEEzTGpZNE55QTJORFl1TURNekxERXdPUzR3TWpVZ05qUTBMakV5TlN3eE1Ea3VNREV4SUVNMk5ESXVNREEyTERFd09TNHdNVEVnTmpRd0xqazVOQ3d4TURjdU5qUTFJRFkwTUM0NU9UUXNNVEExTGpBME5DQkROalF3TGprNU5Dd3hNREV1T1RRMElEWTBNaTR5TVRjc01UQXdMamsyT1NBMk5EUXVNVEkxTERFd01DNDVPRE1nVERZME5DNHhNalVzTVRBd0xqazRNeUJhSUUwMk5ERXVOemM0TERFeE1DNDFOak1nUXpZME1pNDBNRGdzTVRFd0xqZzBOU0EyTkRNdU1UUTVMREV4TUM0NU9EWWdOalEwTERFeE1DNDVPRFlnUXpZME5TNDJNRGtzTVRFd0xqazROaUEyTkRZdU9EUTFMREV4TUM0ME56RWdOalEzTGpjd015d3hNRGt1TkRReklFTTJORGd1TlRZeUxERXdPQzQwTVRRZ05qUTRMams1TERFd05pNDVNekVnTmpRNExqazVMREV3TkM0NU9UVWdRelkwT0M0NU9Td3hNRFF1TURrMUlEWTBPQzQ0T1RJc01UQXpMakkzTmlBMk5EZ3VOamsxTERFd01pNDFNemNnUXpZME9DNDBPVGNzTVRBeExqYzVOaUEyTkRndU1Ua3pMREV3TVM0eE5qUWdOalEzTGpjNE15d3hNREF1TmpNNElFTTJORGN1TXpjekxERXdNQzR4TVRJZ05qUTJMamcxTXl3NU9TNDNNRGtnTmpRMkxqSXlNaXc1T1M0ME1qWWdRelkwTlM0MU9USXNPVGt1TVRRMElEWTBOQzQ0TlRFc09Ua3VNREF6SURZME5DdzVPUzR3TURNZ1F6WTBNaTR6T0Rrc09Ua3VNREF6SURZME1TNHhOVFFzT1RrdU5URTNJRFkwTUM0eU9UY3NNVEF3TGpVME5pQkROak01TGpRek9Dd3hNREV1TlRjMklEWXpPUzR3TURrc01UQXpMakExT1NBMk16a3VNREE1TERFd05DNDVPVFVnUXpZek9TNHdNRGtzTVRBMUxqZzVOQ0EyTXprdU1UQTNMREV3Tmk0M01UTWdOak01TGpNd05pd3hNRGN1TkRVeklFTTJNemt1TlRBekxERXdPQzR4T1RNZ05qTTVMamd3Tnl3eE1EZ3VPREkxSURZME1DNHlNVGNzTVRBNUxqTTFNU0JETmpRd0xqWXlOeXd4TURrdU9EYzNJRFkwTVM0eE5EY3NNVEV3TGpJNE1TQTJOREV1TnpjNExERXhNQzQxTmpNZ1REWTBNUzQzTnpnc01URXdMalUyTXlCYUlFMDJNelV1Tmprc09UWXVOekk1SUVNMk16VXVPRGt4TERrMkxqVTBOU0EyTXpVdU9Ua3hMRGsyTGpNeElEWXpOUzQ1T1RFc09UWXVNREkySUVNMk16VXVPVGt4TERrMUxqYzBNeUEyTXpVdU9Ea3hMRGsxTGpRNU9TQTJNelV1Tmprc09UVXVNamsxSUVNMk16VXVORGtzT1RVdU1Ea3hJRFl6TlM0eU5Ea3NPVFF1T1RrZ05qTTBMamsyTml3NU5DNDVPU0JETmpNMExqWTROQ3c1TkM0NU9TQTJNelF1TkRVeExEazFMakE1TVNBMk16UXVNalk1TERrMUxqSTVOU0JETmpNMExqQTROaXc1TlM0ME9Ua2dOak16TGprNU5TdzVOUzQzTkRNZ05qTXpMams1TlN3NU5pNHdNallnUXpZek15NDVPVFVzT1RZdU16RWdOak0wTGpBNE5pdzVOaTQxTkRVZ05qTTBMakkyT1N3NU5pNDNNamtnUXpZek5DNDBOVEVzT1RZdU9URTBJRFl6TkM0Mk9EUXNPVGN1TURBMklEWXpOQzQ1TmpZc09UY3VNREEySUVNMk16VXVNalE1TERrM0xqQXdOaUEyTXpVdU5Ea3NPVFl1T1RFMElEWXpOUzQyT1N3NU5pNDNNamtnVERZek5TNDJPU3c1Tmk0M01qa2dXaUJOTmpJNExqSTJPU3c1TlM0eU9UVWdRell5T0M0d09EWXNPVFV1TkRrNUlEWXlOeTQ1T1RVc09UVXVOelF6SURZeU55NDVPVFVzT1RZdU1ESTJJRU0yTWpjdU9UazFMRGsyTGpNeElEWXlPQzR3T0RZc09UWXVOVFExSURZeU9DNHlOamtzT1RZdU56STVJRU0yTWpndU5EVXhMRGsyTGpreE5DQTJNamd1TmpnMExEazNMakF3TmlBMk1qZ3VPVFkyTERrM0xqQXdOaUJETmpJNUxqSTBPU3c1Tnk0d01EWWdOakk1TGpRNE9TdzVOaTQ1TVRRZ05qSTVMalk1TERrMkxqY3lPU0JETmpJNUxqZzVMRGsyTGpVME5TQTJNamt1T1Rrc09UWXVNekVnTmpJNUxqazVMRGsyTGpBeU5pQkROakk1TGprNUxEazFMamMwTXlBMk1qa3VPRGtzT1RVdU5EazVJRFl5T1M0Mk9TdzVOUzR5T1RVZ1F6WXlPUzQwT0Rrc09UVXVNRGt4SURZeU9TNHlORGtzT1RRdU9Ua2dOakk0TGprMk5pdzVOQzQ1T1NCRE5qSTRMalk0TkN3NU5DNDVPU0EyTWpndU5EVXhMRGsxTGpBNU1TQTJNamd1TWpZNUxEazFMakk1TlNCTU5qSTRMakkyT1N3NU5TNHlPVFVnV2lCTk5qTXpMams1TlN3eE1URXVNREVnVERZek5pNHdNRGtzTVRFeExqQXhJRXcyTXpZdU1EQTVMRGs1TGpBeElFdzJNek11T1RrMUxEazVMakF4SUV3Mk16TXVPVGsxTERFeE1TNHdNU0JhSUUwMk1qQXNNVEF3SUVNMk1qQXNNVEExTGpNME56TXlPU0EyTWpJdU1UQTBOamsyTERFeE1DNHhPVGszTlRnZ05qSTFMalV5TkRRMU15d3hNVE11TnpnM056SWdRell5TlM0Mk9ETTBPRFVzTVRFekxqazFORFUzTkNBMk1qWXVNREVzTVRFekxqazFOeUEyTWpZdU1ERXNNVEV6TGprMU55QkROakkyTGpFMExERXhNeTQ1TnpJZ05qSTJMakkyTWl3eE1UTXVPVGcwSURZeU5pNHpOellzTVRFekxqazVNaUJETmpJMkxqUTRPU3d4TVRRZ05qSTJMall4TVN3eE1UUXVNREEwSURZeU5pNDNOREVzTVRFMExqQXdOQ0JETmpJM0xqZzNPU3d4TVRRdU1EQTBJRFl5T0M0M01EZ3NNVEV6TGpZek9DQTJNamt1TWpJNUxERXhNaTQ1TURZZ1F6WXlPUzQzTkRnc01URXlMakUzTkNBMk16QXVNREE1TERFeE1TNHdOamdnTmpNd0xqQXdPU3d4TURrdU5UZzRJRXcyTXpBdU1EQTVMRGs1TGpBd09TQk1Oakk0TGpBMU9DdzVPUzR3TURrZ1REWXlPQzR3TlRnc01UQTRMamczTXlCRE5qSTRMakExT0N3eE1Ea3VORFl4SURZeU9DNHdNemNzTVRBNUxqazNOQ0EyTWpjdU9UazNMREV4TUM0ME1USWdRell5Tnk0NU5UWXNNVEV3TGpnME9TQTJNamN1T0RZekxERXhNUzR5TVRJZ05qSTNMamN4Tnl3eE1URXVORGs0SUVNMk1qY3VOVGNzTVRFeExqYzROU0EyTWpjdU16WXpMREV4TVM0NU9UVWdOakkzTGpBNU5Td3hNVEl1TVRNZ1F6WXlOeTR3TVRnc01URXlMakUzSURZeU5pNDVNVFlzTVRFeUxqRTVJRFl5Tmk0NE1qTXNNVEV5TGpJeE9DQkROakl6TGpnME15d3hNRGt1TURBM0lEWXlNaXd4TURRdU56STJJRFl5TWl3eE1EQWdRell5TWl3NU1DNHdOVGdnTmpNd0xqQTFPU3c0TWlBMk5EQXNPRElnUXpZME9TNDVOREVzT0RJZ05qVTRMRGt3TGpBMU9DQTJOVGdzTVRBd0lFTTJOVGdzTVRBNUxqazBNU0EyTkRrdU9UUXhMREV4T0NBMk5EQXNNVEU0SUVNMk16WXVOakE0TERFeE9DQTJNek11TkRVc01URTNMakEwTXlBMk16QXVOelEwTERFeE5TNDBNRGtnUXpZek1DNHlORElzTVRFMUxqZ3dNeUEyTWprdU5UYzNMREV4Tmk0d01EUWdOakk0TGpjME1Td3hNVFl1TURBMElFTTJNamd1TmpFeExERXhOaTR3TURRZ05qSTRMalE0T1N3eE1UWWdOakk0TGpNM05pd3hNVFV1T1RreklFTTJNamd1TWprMUxERXhOUzQ1T0RjZ05qSTRMakl3Tml3eE1UVXVPVGMzSURZeU9DNHhNVGNzTVRFMUxqazJOeUJETmpNeExqTTFPQ3d4TVRndU5EazBJRFl6TlM0ME9UY3NNVEl3SURZME1Dd3hNakFnUXpZMU1TNHdORFlzTVRJd0lEWTJNQ3d4TVRFdU1EUTJJRFkyTUN3eE1EQWdRelkyTUN3NE9DNDVOVFFnTmpVeExqQTBOaXc0TUNBMk5EQXNPREFnUXpZeU9DNDVOVFFzT0RBZ05qSXdMRGc0TGprMU5DQTJNakFzTVRBd0lGb2lJR2xrUFNKc2IyZHZJajQ4TDNCaGRHZytJQ0FnSUNBZ0lDQThMMmMrSUNBZ0lEd3ZaejQ4TDNOMlp6ND0pO1xuICBiYWNrZ3JvdW5kLXNpemU6IDIwcHg7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNlMWU1ZTU7XG4gIGJveC1zaGFkb3c6IDAgMCAwIDFweCAjZTFlNWU1O1xuICBjdXJzb3I6IHBvaW50ZXI7XG5cbiAgLy8gVXN1YWxseS1yZWR1bmRhbnQgc3R5bGluZyB0byBhdm9pZCBpbmZsdWVuY2UgYnkgKHZlcnkgZ2VuZXJhbCkgc3R5bGVzIGluIGhvc3Qgc2l0ZVxuICBwYWRkaW5nOiAwO1xuICBtYXJnaW46IDA7XG5cbiAgJjpob3ZlciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyMjUsMjI5LDIyOSwgLjMpO1xuICB9XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style type="text/css">
+.vue-modal-top,
+.vue-modal-bottom,
+.vue-modal-left,
+.vue-modal-right,
+.vue-modal-topRight,
+.vue-modal-topLeft,
+.vue-modal-bottomLeft,
+.vue-modal-bottomRight {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  background: transparent;
+  z-index: 9999999;
+}
+.vue-modal-topRight,
+.vue-modal-topLeft,
+.vue-modal-bottomLeft,
+.vue-modal-bottomRight {
+  width: 12px;
+  height: 12px;
+}
+.vue-modal-top {
+  right: 12;
+  top: 0;
+  width: 100%;
+  height: 12px;
+  cursor: n-resize;
+}
+.vue-modal-bottom {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 12px;
+  cursor: s-resize;
+}
+.vue-modal-left {
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  cursor: w-resize;
+}
+.vue-modal-right {
+  right: 0;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  cursor: e-resize;
+}
+.vue-modal-topRight {
+  right: 0;
+  top: 0;
+  background: transparent;
+  cursor: ne-resize;
+}
+.vue-modal-topLeft {
+  left: 0;
+  top: 0;
+  cursor: nw-resize;
+}
+.vue-modal-bottomLeft {
+  left: 0;
+  bottom: 0;
+  cursor: sw-resize;
+}
+.vue-modal-bottomRight {
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
+}
+#vue-modal-triangle::after {
+  display: block;
+  position: absolute;
+  content: '';
+  background: transparent;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #ddd;
+  border-left: 10px solid transparent;
+}
+#vue-modal-triangle.clicked::after {
+  border-bottom: 10px solid #369be9;
+}
+</style><style type="text/css">
+.vm--block-scroll {
+  overflow: hidden;
+  width: 100vw;
+}
+.vm--container {
+  position: fixed;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+}
+.vm--overlay {
+  position: fixed;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  /* z-index: 999; */
+  opacity: 1;
+}
+.vm--container.scrollable {
+  height: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.vm--modal {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
+}
+.vm--container.scrollable .vm--modal {
+  margin-bottom: 2px;
+}
+.vm--top-right-slot {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.vm-transition--overlay-enter-active,
+.vm-transition--overlay-leave-active {
+  transition: all 50ms;
+}
+.vm-transition--overlay-enter,
+.vm-transition--overlay-leave-active {
+  opacity: 0;
+}
+.vm-transition--modal-enter-active,
+.vm-transition--modal-leave-active {
+  transition: all 400ms;
+}
+.vm-transition--modal-enter,
+.vm-transition--modal-leave-active {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.vm-transition--default-enter-active,
+.vm-transition--default-leave-active {
+  transition: all 2ms;
+}
+.vm-transition--default-enter,
+.vm-transition--default-leave-active {
+  opacity: 0;
+}
+</style><style type="text/css">
+.vue-dialog {
+  font-size: 14px;
+}
+.vue-dialog div {
+  box-sizing: border-box;
+}
+.vue-dialog-content {
+  flex: 1 0 auto;
+  width: 100%;
+  padding: 14px;
+}
+.vue-dialog-content-title {
+  font-weight: 600;
+  padding-bottom: 14px;
+}
+.vue-dialog-buttons {
+  display: flex;
+  flex: 0 1 auto;
+  width: 100%;
+  border-top: 1px solid #eee;
+}
+.vue-dialog-buttons-none {
+  width: 100%;
+  padding-bottom: 14px;
+}
+.vue-dialog-button {
+  font-size: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  line-height: 40px;
+  height: 40px;
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
+.vue-dialog-button:hover {
+  background: #f9f9f9;
+}
+.vue-dialog-button:active {
+  background: #f3f3f3;
+}
+.vue-dialog-button:not(:first-of-type) {
+  border-left: 1px solid #eee;
+}
+</style><style type="text/css">
+.vue-modal-top,
+.vue-modal-bottom,
+.vue-modal-left,
+.vue-modal-right,
+.vue-modal-topRight,
+.vue-modal-topLeft,
+.vue-modal-bottomLeft,
+.vue-modal-bottomRight {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  background: transparent;
+  z-index: 9999999;
+}
+.vue-modal-topRight,
+.vue-modal-topLeft,
+.vue-modal-bottomLeft,
+.vue-modal-bottomRight {
+  width: 12px;
+  height: 12px;
+}
+.vue-modal-top {
+  right: 12;
+  top: 0;
+  width: 100%;
+  height: 12px;
+  cursor: n-resize;
+}
+.vue-modal-bottom {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 12px;
+  cursor: s-resize;
+}
+.vue-modal-left {
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  cursor: w-resize;
+}
+.vue-modal-right {
+  right: 0;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  cursor: e-resize;
+}
+.vue-modal-topRight {
+  right: 0;
+  top: 0;
+  background: transparent;
+  cursor: ne-resize;
+}
+.vue-modal-topLeft {
+  left: 0;
+  top: 0;
+  cursor: nw-resize;
+}
+.vue-modal-bottomLeft {
+  left: 0;
+  bottom: 0;
+  cursor: sw-resize;
+}
+.vue-modal-bottomRight {
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
+}
+#vue-modal-triangle::after {
+  display: block;
+  position: absolute;
+  content: '';
+  background: transparent;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #ddd;
+  border-left: 10px solid transparent;
+}
+#vue-modal-triangle.clicked::after {
+  border-bottom: 10px solid #369be9;
+}
+</style><style type="text/css">
+.vm--block-scroll {
+  overflow: hidden;
+  width: 100vw;
+}
+.vm--container {
+  position: fixed;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+}
+.vm--overlay {
+  position: fixed;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  /* z-index: 999; */
+  opacity: 1;
+}
+.vm--container.scrollable {
+  height: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.vm--modal {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
+}
+.vm--container.scrollable .vm--modal {
+  margin-bottom: 2px;
+}
+.vm--top-right-slot {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.vm-transition--overlay-enter-active,
+.vm-transition--overlay-leave-active {
+  transition: all 50ms;
+}
+.vm-transition--overlay-enter,
+.vm-transition--overlay-leave-active {
+  opacity: 0;
+}
+.vm-transition--modal-enter-active,
+.vm-transition--modal-leave-active {
+  transition: all 400ms;
+}
+.vm-transition--modal-enter,
+.vm-transition--modal-leave-active {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.vm-transition--default-enter-active,
+.vm-transition--default-leave-active {
+  transition: all 2ms;
+}
+.vm-transition--default-enter,
+.vm-transition--default-leave-active {
+  opacity: 0;
+}
+</style><style type="text/css">
+.vue-dialog {
+  font-size: 14px;
+}
+.vue-dialog div {
+  box-sizing: border-box;
+}
+.vue-dialog-content {
+  flex: 1 0 auto;
+  width: 100%;
+  padding: 14px;
+}
+.vue-dialog-content-title {
+  font-weight: 600;
+  padding-bottom: 14px;
+}
+.vue-dialog-buttons {
+  display: flex;
+  flex: 0 1 auto;
+  width: 100%;
+  border-top: 1px solid #eee;
+}
+.vue-dialog-buttons-none {
+  width: 100%;
+  padding-bottom: 14px;
+}
+.vue-dialog-button {
+  font-size: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  line-height: 40px;
+  height: 40px;
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
+.vue-dialog-button:hover {
+  background: #f9f9f9;
+}
+.vue-dialog-button:active {
+  background: #f3f3f3;
+}
+.vue-dialog-button:not(:first-of-type) {
+  border-left: 1px solid #eee;
+}
+</style></head>
+<body data-scrollprevented="false" data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed="">
+
+
+
+<div data-v-34b633f4="" id="notify-bubble-layout" aria-atomic="true"></div>
+
+<div class="panel" id="main">
+    <div class="blue-top-header top-blue-header bg-blueColour py-2 d-none d-lg-block" style="">
+        <div class="container">
+            <div class="row">
+                <div class="col d-none d-md-inline-block">
+                    <div class="">
+                        <div class="float-left">
+                            <a href="https://www.dvfu.ru/" title="ДВФУ" class="whiteColor text-uppercase font-weight-bold tc-whiteColor mb-0 mr-2 f-XS">www.dvfu.ru</a>
+                        </div>
+                        <div class="float-right">
+                            <a href="https://univer.dvfu.ru/contacts" title="Единый контактный центр" class="whiteColor text-uppercase font-weight-bold tc-whiteColor mb-0 mr-2 f-XS">Единый контактный центр</a>
+                            <a href="https://univer.dvfu.ru/feedback" title="Напишите нам" class="whiteColor text-uppercase font-weight-bold tc-whiteColor mb-0 mr-2 f-XS">Напишите нам</a>
+                            <a href="https://1citil.dvfu.ru/itil_win/ru_RU/" title="Техническая поддержка" class="whiteColor text-uppercase font-weight-bold tc-whiteColor mb-0 mr-2 f-XS">Техническая поддержка</a>
+                            <a href="https://univer.dvfu.ru/pass#" class="bvi-open whiteColor text-uppercase font-weight-bold tc-whiteColor mb-0 mr-2 f-XS" title="Версия для слабовидящих"><i class="bvi-icon bvi-eye"></i> Версия для слабовидящих</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-blur mobile-menu-blur" id="bg-blur" style="display: none;"></div>
+
+    <header class="main-header " style="position: relative; top: 0px; margin-top: 0px;">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="d-lg-none col-4 col-lg-3 align-baseline hamburger-btn">
+                    <button class="hamburger hamburger--spin color-gray" type="button" id="mobileMenuOpen">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                    </button>
+                </div>
+                <div id="menu" class="menu d-lg-none" style="display: none">
+                    <div class="menu-header"></div>
+                    <div class="overflow-y-scroll pt-2 pb-7" id="menu-content">
+                        <nav class="main-nav menu-vertical">
+                            <ul>
+                                <li>
+                                    <a href="https://www.dvfu.ru/" target="_blank">
+                                        <img src="./index_files/icon-sm-dvfu.svg" class="menu-icon mr-1">
+                                        <span>Официальный сайт ДВФУ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://univer.dvfu.ru/pass#" class="bvi-open">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye menu-icon mr-1"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                        <span>Версия для слабовидящих</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="main-nav menu-vertical">
+                            <ul>
+                                <li>
+                                    <a href="https://univer.dvfu.ru/contacts" class="menu-link js-service-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone-call menu-icon mr-1"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                        <span>Единый контактный центр</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://univer.dvfu.ru/feedback" class="menu-link js-service-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send menu-icon mr-1"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                        <span>Напишите нам</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://1citil.dvfu.ru/itil_win/ru_RU/" class="menu-link js-service-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-headphones menu-icon mr-1"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                                        <span>Техническая поддержка</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="main-nav menu-vertical"><ul><li><h3>Обучение</h3><ul><li><a class="menu-link js-service-link" href="https://dpo.dvfu.ru/dd-new" data-service-id="93" data-service-title="Цифровые кафедры" data-service-name="dpo-link"><span class="service-icon menu-icon service-icon__dpo-link"></span> <span>Цифровые кафедры</span></a></li><li><a class="menu-link js-service-link" href="https://dpo.dvfu.ru/" data-service-id="90" data-service-title="Дополнительное образование" data-service-name="furtherEducation"><span class="service-icon menu-icon service-icon__furtherEducation"></span> <span>Дополнительное образование</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/blackboard" data-service-id="5" data-service-title="Электронная образовательная среда BLACKBOARD" data-service-name="blackboard"><span class="service-icon menu-icon service-icon__blackboard"></span> <span>Электронная образовательная среда BLACKBOARD</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/gradebook" data-service-id="31" data-service-title="Зачётная книжка" data-service-name="new-egradebook"><span class="service-icon menu-icon service-icon__new-egradebook"></span> <span>Зачётная книжка</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/schedule" data-service-id="48" data-service-title="Расписание занятий" data-service-name="class-schedules"><span class="service-icon menu-icon service-icon__class-schedules"></span> <span>Расписание занятий</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/rau" data-service-id="65" data-service-title="Рейтинг" data-service-name="rau"><span class="service-icon menu-icon service-icon__rau"></span> <span>Рейтинг</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/profile/portfolio" data-service-id="67" data-service-title="Портфолио студента" data-service-name="portfolio-student"><span class="service-icon menu-icon service-icon__portfolio-student"></span> <span>Портфолио студента</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/brs/rating-plan/" data-service-id="69" data-service-title="Рейтинг-планы" data-service-name="rating-plans"><span class="service-icon menu-icon service-icon__rating-plans"></span> <span>Рейтинг-планы</span></a></li></ul></li><li><h3>Финансы</h3><ul><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/payment/grant" data-service-id="36" data-service-title="Стипендия" data-service-name="grant"><span class="service-icon menu-icon service-icon__grant"></span> <span>Стипендия</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/bank/choose-bank/index" data-service-id="88" data-service-title="Выбор банка" data-service-name="choose-bank"><span class="service-icon menu-icon service-icon__choose-bank"></span> <span>Выбор банка</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/payment/contract/" data-service-id="85" data-service-title="Оплата договоров" data-service-name="contract-payment"><span class="service-icon menu-icon service-icon__contract-payment"></span> <span>Оплата договоров</span></a></li><li><a class="menu-link js-service-link" href="https://pay.dvfu.ru/" data-service-id="86" data-service-title="Сервис онлайн-платежей" data-service-name="pay-dvfu"><span class="service-icon menu-icon service-icon__pay-dvfu"></span> <span>Сервис онлайн-платежей</span></a></li></ul></li><li><h3>Проживание</h3><ul><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/settle" data-service-id="63" data-service-title="Заселение 23-24" data-service-name="settle"><span class="service-icon menu-icon service-icon__settle"></span> <span>Заселение 23-24</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/resettle" data-service-id="70" data-service-title="Переселение" data-service-name="resettle"><span class="service-icon menu-icon service-icon__resettle"></span> <span>Переселение</span></a></li><li><a class="menu-link js-service-link" href="https://moore-jp.github.io/pass5/" data-service-id="71" data-service-title="Проживание" data-service-name="accommodation"><span class="service-icon menu-icon service-icon__accommodation"></span> <span>Проживание</span></a></li></ul></li><li><h3>Заявки</h3><ul><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/mfc/default/enquiry?id=car-pass" data-service-id="1" data-service-title="Пропуск на автомобиль" data-service-name="car-pass"><span class="service-icon menu-icon service-icon__car-pass"></span> <span>Пропуск на автомобиль</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/vpn-access" data-service-id="15" data-service-title="VPN" data-service-name="vpn-access"><span class="service-icon menu-icon service-icon__vpn-access"></span> <span>VPN</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/room-workplace-service" data-service-id="42" data-service-title="Обслуживание кабинета" data-service-name="room-workplace-service"><span class="service-icon menu-icon service-icon__room-workplace-service"></span> <span>Обслуживание кабинета</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/mfc" data-service-id="80" data-service-title="Единое окно" data-service-name="mfc"><span class="service-icon menu-icon service-icon__mfc"></span> <span>Единое окно</span></a></li><li><a class="menu-link js-service-link" href="https://www.dvfu.ru/about/rectorate/32416/the-department-of-personnel-management/the-committee-on-ethics-and-official-conduct-of-employees-of-the-university/" data-service-id="92" data-service-title="Жалоба на этику" data-service-name="ethics-violation-complaint"><span class="service-icon menu-icon service-icon__ethics-violation-complaint"></span> <span>Жалоба на этику</span></a></li></ul></li><li><h3>Сервисы</h3><ul><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/email" data-service-id="16" data-service-title="Почта" data-service-name="email"><span class="service-icon menu-icon service-icon__email"></span> <span>Почта</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/library" data-service-id="21" data-service-title="Библиотека" data-service-name="library"><span class="service-icon menu-icon service-icon__library"></span> <span>Библиотека</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/phonebook" data-service-id="33" data-service-title="Телефонный справочник" data-service-name="phonebook"><span class="service-icon menu-icon service-icon__phonebook"></span> <span>Телефонный справочник</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/microsoft-office-365" data-service-id="38" data-service-title="MS Office 365" data-service-name="microsoft-office-365"><span class="service-icon menu-icon service-icon__microsoft-office-365"></span> <span>MS Office 365</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/wi-fi-access" data-service-id="47" data-service-title="Wi-Fi" data-service-name="wi-fi-access"><span class="service-icon menu-icon service-icon__wi-fi-access"></span> <span>Wi-Fi</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/pass" data-service-id="68" data-service-title="Заказ пропуска" data-service-name="pass"><span class="service-icon menu-icon service-icon__pass"></span> <span>Заказ пропуска</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/bus_schedule" data-service-id="75" data-service-title="Расписание автобусов" data-service-name="bus_schedule"><span class="service-icon menu-icon service-icon__bus_schedule"></span> <span>Расписание автобусов</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/mobile-app" data-service-id="83" data-service-title="Мобильное приложение «Мой Универ»" data-service-name="mobile-app"><span class="service-icon menu-icon service-icon__mobile-app"></span> <span>Мобильное приложение «Мой Универ»</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/studentProject" data-service-id="87" data-service-title="Твоя инициатива" data-service-name="student-project"><span class="service-icon menu-icon service-icon__student-project"></span> <span>Твоя инициатива</span></a></li></ul></li></ul></nav>                    </div>
+                </div>
+                <div class="col-4 col-lg-2 col-xl-2 px-1 logo-div">
+                                        <a href="https://univer.dvfu.ru/" title="Мой Универ" class="border-0">
+                                            <div id="desktopLogoDiv" class="d-none d-lg-block position-relative" style="height: 90px;">
+                            <img id="desktopLogo" class="img-fluid position-relative main-logo" alt="Мой Универ" title="Мой Универ" src="./index_files/img-myuniver-logo.svg" style="">
+                            <img id="desktopLogoMin" class="img-fluid position-absolute main-logo my-auto" style="height: 40px; top: 0px; bottom: 0px; display: none;" alt="Мой Универ" title="Мой Универ" src="./index_files/img-logo-symbol.svg">
+                        </div>
+                        <img id="mobileLogo" class="img-fluid d-lg-none position-relative main-logo" alt="Мой Универ" title="Мой Универ" src="./index_files/img-logo-symbol.svg">
+                                            </a>
+                                        </div>
+                <div class="d-none d-lg-block col-lg-8 col-xl-7 position-static">
+                    <nav class="main-nav menu-horizontal"><ul class="nav"><li><a id="dropdown-study" class="btn btn-link dropdown-toggle f-M" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Обучение</a><ul class="dropdown-menu shadow-dropdown" aria-labelledby="dropdown-study"><li><a class="menu-link js-service-link" href="https://dpo.dvfu.ru/dd-new" data-service-id="93" data-service-title="Цифровые кафедры" data-service-name="dpo-link"><span class="service-icon menu-icon service-icon__dpo-link"></span> <span>Цифровые кафедры</span></a></li><li><a class="menu-link js-service-link" href="https://dpo.dvfu.ru/" data-service-id="90" data-service-title="Дополнительное образование" data-service-name="furtherEducation"><span class="service-icon menu-icon service-icon__furtherEducation"></span> <span>Дополнительное образование</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/blackboard" data-service-id="5" data-service-title="Электронная образовательная среда BLACKBOARD" data-service-name="blackboard"><span class="service-icon menu-icon service-icon__blackboard"></span> <span>Электронная образовательная среда BLACKBOARD</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/gradebook" data-service-id="31" data-service-title="Зачётная книжка" data-service-name="new-egradebook"><span class="service-icon menu-icon service-icon__new-egradebook"></span> <span>Зачётная книжка</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/schedule" data-service-id="48" data-service-title="Расписание занятий" data-service-name="class-schedules"><span class="service-icon menu-icon service-icon__class-schedules"></span> <span>Расписание занятий</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/rau" data-service-id="65" data-service-title="Рейтинг" data-service-name="rau"><span class="service-icon menu-icon service-icon__rau"></span> <span>Рейтинг</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/profile/portfolio" data-service-id="67" data-service-title="Портфолио студента" data-service-name="portfolio-student"><span class="service-icon menu-icon service-icon__portfolio-student"></span> <span>Портфолио студента</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/brs/rating-plan/" data-service-id="69" data-service-title="Рейтинг-планы" data-service-name="rating-plans"><span class="service-icon menu-icon service-icon__rating-plans"></span> <span>Рейтинг-планы</span></a></li></ul></li><li><a id="dropdown-finance" class="btn btn-link dropdown-toggle f-M" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Финансы</a><ul class="dropdown-menu shadow-dropdown" aria-labelledby="dropdown-finance"><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/payment/grant" data-service-id="36" data-service-title="Стипендия" data-service-name="grant"><span class="service-icon menu-icon service-icon__grant"></span> <span>Стипендия</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/bank/choose-bank/index" data-service-id="88" data-service-title="Выбор банка" data-service-name="choose-bank"><span class="service-icon menu-icon service-icon__choose-bank"></span> <span>Выбор банка</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/payment/contract/" data-service-id="85" data-service-title="Оплата договоров" data-service-name="contract-payment"><span class="service-icon menu-icon service-icon__contract-payment"></span> <span>Оплата договоров</span></a></li><li><a class="menu-link js-service-link" href="https://pay.dvfu.ru/" data-service-id="86" data-service-title="Сервис онлайн-платежей" data-service-name="pay-dvfu"><span class="service-icon menu-icon service-icon__pay-dvfu"></span> <span>Сервис онлайн-платежей</span></a></li></ul></li><li><a id="dropdown-accommodation" class="btn btn-link dropdown-toggle f-M" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Проживание</a><ul class="dropdown-menu shadow-dropdown" aria-labelledby="dropdown-accommodation"><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/settle" data-service-id="63" data-service-title="Заселение 23-24" data-service-name="settle"><span class="service-icon menu-icon service-icon__settle"></span> <span>Заселение 23-24</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/resettle" data-service-id="70" data-service-title="Переселение" data-service-name="resettle"><span class="service-icon menu-icon service-icon__resettle"></span> <span>Переселение</span></a></li><li><a class="menu-link js-service-link" href="https://moore-jp.github.io/pass5/" data-service-id="71" data-service-title="Проживание" data-service-name="accommodation"><span class="service-icon menu-icon service-icon__accommodation"></span> <span>Проживание</span></a></li></ul></li><li><a id="dropdown-applications" class="btn btn-link dropdown-toggle f-M" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Заявки</a><ul class="dropdown-menu shadow-dropdown" aria-labelledby="dropdown-applications"><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/mfc/default/enquiry?id=car-pass" data-service-id="1" data-service-title="Пропуск на автомобиль" data-service-name="car-pass"><span class="service-icon menu-icon service-icon__car-pass"></span> <span>Пропуск на автомобиль</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/vpn-access" data-service-id="15" data-service-title="VPN" data-service-name="vpn-access"><span class="service-icon menu-icon service-icon__vpn-access"></span> <span>VPN</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/room-workplace-service" data-service-id="42" data-service-title="Обслуживание кабинета" data-service-name="room-workplace-service"><span class="service-icon menu-icon service-icon__room-workplace-service"></span> <span>Обслуживание кабинета</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/mfc" data-service-id="80" data-service-title="Единое окно" data-service-name="mfc"><span class="service-icon menu-icon service-icon__mfc"></span> <span>Единое окно</span></a></li><li><a class="menu-link js-service-link" href="https://www.dvfu.ru/about/rectorate/32416/the-department-of-personnel-management/the-committee-on-ethics-and-official-conduct-of-employees-of-the-university/" data-service-id="92" data-service-title="Жалоба на этику" data-service-name="ethics-violation-complaint"><span class="service-icon menu-icon service-icon__ethics-violation-complaint"></span> <span>Жалоба на этику</span></a></li></ul></li><li><a id="dropdown-services" class="btn btn-link dropdown-toggle f-M" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Сервисы</a><ul class="dropdown-menu shadow-dropdown" aria-labelledby="dropdown-services"><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/email" data-service-id="16" data-service-title="Почта" data-service-name="email"><span class="service-icon menu-icon service-icon__email"></span> <span>Почта</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/library" data-service-id="21" data-service-title="Библиотека" data-service-name="library"><span class="service-icon menu-icon service-icon__library"></span> <span>Библиотека</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/phonebook" data-service-id="33" data-service-title="Телефонный справочник" data-service-name="phonebook"><span class="service-icon menu-icon service-icon__phonebook"></span> <span>Телефонный справочник</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/microsoft-office-365" data-service-id="38" data-service-title="MS Office 365" data-service-name="microsoft-office-365"><span class="service-icon menu-icon service-icon__microsoft-office-365"></span> <span>MS Office 365</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/wi-fi-access" data-service-id="47" data-service-title="Wi-Fi" data-service-name="wi-fi-access"><span class="service-icon menu-icon service-icon__wi-fi-access"></span> <span>Wi-Fi</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/pass" data-service-id="68" data-service-title="Заказ пропуска" data-service-name="pass"><span class="service-icon menu-icon service-icon__pass"></span> <span>Заказ пропуска</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/bus_schedule" data-service-id="75" data-service-title="Расписание автобусов" data-service-name="bus_schedule"><span class="service-icon menu-icon service-icon__bus_schedule"></span> <span>Расписание автобусов</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/page/service/mobile-app" data-service-id="83" data-service-title="Мобильное приложение «Мой Универ»" data-service-name="mobile-app"><span class="service-icon menu-icon service-icon__mobile-app"></span> <span>Мобильное приложение «Мой Универ»</span></a></li><li><a class="menu-link js-service-link" href="https://univer.dvfu.ru/studentProject" data-service-id="87" data-service-title="Твоя инициатива" data-service-name="student-project"><span class="service-icon menu-icon service-icon__student-project"></span> <span>Твоя инициатива</span></a></li></ul></li></ul></nav>                </div>
+                <div class="col-4 col-lg-2 col-xl-3 pl-0 align-baseline">
+                    <nav class="actions-nav">
+                        <ul class="nav f-M justify-content-end">
+                            <li class="nav-item">
+                                <div data-v-02f2ebe7="" tabindex="-1" class="nav-link pl-0"><div data-v-829295b8="" data-v-02f2ebe7="" class="notification-popup shadow-dropdown d-none"><h3 data-v-829295b8="" class="nothing"><a data-v-829295b8="" href="https://univer.dvfu.ru/notification/">У вас 3 уведомления</a></h3> <div data-v-829295b8="" class="notification-popup__notifications mb-2"><div data-v-7fb95ed1="" data-v-829295b8="" class="notify-element info"><h3 data-v-7fb95ed1="" class="notification-header">Вам необходимо подписать документ в ЛК "Мой Универ"</h3> <p data-v-7fb95ed1="" class="created-at"></p></div><div data-v-7fb95ed1="" data-v-829295b8="" class="notify-element info"><h3 data-v-7fb95ed1="" class="notification-header">Вам необходимо подписать документ в ЛК "Мой Универ"</h3> <p data-v-7fb95ed1="" class="created-at"></p></div><div data-v-7fb95ed1="" data-v-829295b8="" class="notify-element info"><h3 data-v-7fb95ed1="" class="notification-header">Вам необходимо подписать документ в ЛК "Мой Универ"</h3> <p data-v-7fb95ed1="" class="created-at"></p></div></div> <div data-v-829295b8="" class="d-flex justify-content-center"><button data-v-829295b8="" class="btn btn-link p-0 f-S text-uppercase">Отметить все прочитанным</button></div> <!----></div> <i data-v-02f2ebe7=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></i> <span data-v-02f2ebe7="" class="red-dot">3</span></div>
+                            </li>
+                            <li class="nav-item pl-sm-0">
+                                <a href="https://univer.dvfu.ru/pass#" class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    </a><div class="d-inline"><a href="https://univer.dvfu.ru/pass#" class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user icon-user-profile"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                        <span class="d-none d-xl-inline-block user-profile-name" title="Максимова А. В.">
+                                            Максимова А. В.                                        </span>
+                                        <span class="d-none d-md-inline dropdown-toggle"></span>
+                                        </a><div class="dropdown-menu shadow-dropdown"><a href="https://univer.dvfu.ru/pass#" class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                            <div class="dropdown-item">
+                                                <img style="width: 20px; height: 20px" src="./index_files/icon-wow-coin.png">
+                                                <span data-url="/get-coin" id="coin-balance">100</span>
+                                            </div>
+                                            <div class="dropdown-divider"></div>
+                                            </a><a href="https://univer.dvfu.ru/pass#" class="dropdown-item d-none d-md-block d-lg-none" data-toggle="tooltip" data-placement="top" title="Уведомления"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell icon-N mr-1"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg> Уведомления</a>
+                                            <a class="dropdown-item" href="https://univer.dvfu.ru/profile"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user icon-N mr-1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Профиль</a>
+                                            <a class="dropdown-item" href="https://univer.dvfu.ru/userRequest"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list icon-N mr-1"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg> Мои заявки</a>
+                                            <div class="dropdown-divider"></div>
+                                                                                        <a class="dropdown-item" href="https://esa.dvfu.ru/logout"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out icon-N"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg> Выход</a>
+                                        </div>
+                                    </div>
+                                
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content my-3 mb-6">
+<div class="container mb-3">
+    <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-8 col-md-12">
+            <div class="card">
+                <div class="card-body text-center p-5">
+                    <img src="./index_files/icon-pass-received.png" alt="">                    <p>
+                                                    Спасибо, что получили пропуск, не забывайте брать его с собой.                                            </p>
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <div class="mb-1"><strong>Фронтальная сторона</strong></div>
+                            <img src="./index_files/sign-1-maksimova-anastasia-vaceslavovna-front.png" class="img-fluid" alt="Фронтальная сторона">
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <div class="mb-1"><strong>Задняя сторона</strong></div>
+                            <img src="./index_files/sign-1-maksimova-anastasia-vaceslavovna-back.png" class="img-fluid" alt="Задняя сторона">
+                        </div>
+                    </div>
+
+                                            <div class="mt-3 text-center">
+                            <a href="https://univer.dvfu.ru/pass/wallet/save-apple-wallet-pass"><img src="./index_files/btn-add-to-apple-wallet.svg" alt="" style="width: 200px; height: auto"></a>                        </div>
+                                    </div>
+
+                <div id="accordion">
+                    <div class="mb-4">
+                        <div id="headingOne">
+                            <h5 class="">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Как заменить пропуск в случае утери
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="m-2 collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div>
+                                <p>Обратиться в департамент комплексной безопасности в корпусе С, кабинет С617.</p>
+
+                                <p>Время работы: пн-пт 09:00-18:00, перерыв 13:00-14:00.</p>
+
+                                <p>При себе иметь: паспорт</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div id="headingTwo">
+                            <h5 class="">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Как перевыпустить пропуск при изменении данных
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="m-2 collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div>
+                                <p>Если изменились ФИО, должность, название подразделения и т.п. то нужно обратиться в
+                                    бюро пропусков в корпусе "С" кабинет С617.</p>
+
+                                <p>Время работы: пн-пт 09:00-18:00, перерыв 13:00-14:00.</p>
+
+                                <p>При себе иметь: паспорт и старый пропуск.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <footer class="footer bg-whiteColour py-6 main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-8">
+                    <p>© 2023 «Мой Универ». Управление информатизации ДВФУ.<br> Информация, размещённая на&nbsp;данном сайте, является собственностью ДВФУ. Любое копирование материалов сайта без&nbsp;разрешения владельца запрещено.</p>
+                </div>
+                                                <div class="col-12 col-md-6 col-lg-8">
+                    <a href="https://univer.dvfu.ru/pass#" class="bvi-open text-dark text-uppercase font-weight-bold mb-0 mr-2 f-S" title="Версия для слабовидящих">
+                        <i class="bvi-icon bvi-eye"></i>
+                        Версия для слабовидящих                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<div data-v-78b41de6=""></div>
+
+<!-- Modal -->
+<div class="modal fade" id="jsModal" tabindex="-1" role="dialog" aria-labelledby="jsModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="jsModalTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body" id="jsModalBody">
+
+            </div>
+            <div class="modal-footer" id="jsModalFooter">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./index_files/jquery.min.js.загрузка"></script>
+<script src="./index_files/yii.js.загрузка"></script>
+<script src="./index_files/app.js.загрузка"></script>
+<script src="./index_files/notification.js.загрузка"></script>
+<script src="./index_files/app(1).js.загрузка"></script>    <!-- Global site tag (gtag.js) - Google Analytics -->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132455446-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-132455446-2');
+</script>-->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+            if (document.scripts[j].src === r) {
+                return;
+            }
+        }
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(62906206, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/62906206" style="position:absolute; left:-9999px;" alt=""/></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+<div id="japanese-io-selection-decoration-button" class="jio-read-button-container" style="position: absolute; display: none;"><div class="jio-read-button"></div></div>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
